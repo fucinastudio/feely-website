@@ -1,3 +1,3 @@
-# Template
+# Feely Website
 
 Coming soon...
