@@ -4,15 +4,13 @@ import Link from 'next/link';
 import { cn } from '@fucina/utils';
 
 interface LogoProps {
-  url: string;
-  title: string;
   className?: string;
 }
 
-export default function Logo({ url, title, className }: LogoProps) {
+export default function Logo({ className }: LogoProps) {
   return (
     <div className={cn("cursor-pointer", className)}>
-      <Link href={url}>
+      <Link href="/">
         <div className="flex justify-center items-center gap-2">
           <svg
             width="22"
@@ -56,7 +54,7 @@ export default function Logo({ url, title, className }: LogoProps) {
               </linearGradient>
             </defs>
           </svg>
-          <span className="pt-0.5 font-brand font-medium text-2xl">{title}</span>
+          <span className="pt-0.5 font-brand font-medium text-2xl">Feely</span>
         </div>
       </Link>
     </div>

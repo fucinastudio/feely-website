@@ -23,7 +23,7 @@ export default function Banner() {
         </div>
         <div className="mt-8 sm:mt-10">
           <Button asChild className="font-brand font-medium text-lg">
-            <Link href="/signup">Start for free</Link>
+            <Link href="/waitlist">Join the waitlist</Link>
           </Button>
         </div>
       </div>

@@ -12,8 +12,6 @@ export default function RootLayout({
   return (
     <main className="w-screen h-screen">
       <Logo
-        url="/"
-        title="Website Template"
         className="top-6 left-6 z-50 absolute"
       />
       {children}

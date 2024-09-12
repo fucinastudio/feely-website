@@ -16,17 +16,22 @@ export default function Hero() {
         </Tag>
         <div className="justify-items-center gap-4 sm:gap-6 grid mt-6 sm:mt-8 max-w-screen-md text-center">
           <h1 className="font-brand font-medium text-6xl sm:text-7xl">
-            Fucina is the <span className="brand-gradient">new way</span> to
-            build landing pages.
+            <span className="brand-gradient">User feedbacks</span> get real by
+            being rewarded
           </h1>
           <p className="max-w-screen-sm text-description text-lg">
-            Beautifully designed, animated components and templates built with
-            Tailwind CSS, React, and Framer Motion.
+            Feely is a spot where user thoughts become a treasure.
+            <br></br>
+            More than giving users a voice: it&apos;s encouraging them to listen
+            to each other, through conversations and rewarding.
+            <br></br>
+            The result? A product actually built for your people. And they will
+            feel part of it.
           </p>
         </div>
         <div className="mt-10">
           <Button asChild className="font-brand font-medium text-lg">
-            <Link href="/signup">Start for free</Link>
+            <Link href="/waitlist">Join the waitlist</Link>
           </Button>
         </div>
         <HeroImg />

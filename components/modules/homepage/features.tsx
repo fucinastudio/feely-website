@@ -180,6 +180,7 @@ export default function Features() {
         button={
           <Button asChild variant="secondary" className="w-full sm:w-fit">
             <Link
+              target="blank"
               href="https://github.com/feelyso/feely"
               className="flex items-center gap-2"
             >
