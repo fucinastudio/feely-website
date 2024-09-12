@@ -1,6 +1,7 @@
 {
   "name": "feely-website",
   "version": "0.0.1",
+  "description": "Feely website",
   "private": true,
   "scripts": {
     "dev": "next dev",

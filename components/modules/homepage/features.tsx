@@ -181,7 +181,7 @@ export default function Features() {
           <Button asChild variant="secondary" className="w-full sm:w-fit">
             <Link
               target="blank"
-              href="https://github.com/feelyso/feely"
+              href="https://github.com/fucinastudio/feely"
               className="flex items-center gap-2"
             >
               <GithubIcon />
