@@ -2,22 +2,7 @@
 
 import React, { useState } from 'react';
 import {
-  Separator,
-  Tag,
-  Button,
-  Label,
-  RadioGroup,
-  RadioGroupItem,
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-  Toggle,
-  Skeleton,
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from '@fucina/ui';
-import {
+  HeartHandshake,
   AlarmClock,
   Banknote,
   Beer,
@@ -65,6 +50,23 @@ import {
   TreePalm,
 } from 'lucide-react';
 import { useTheme } from 'next-themes';
+
+import {
+  Separator,
+  Tag,
+  Button,
+  Label,
+  RadioGroup,
+  RadioGroupItem,
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+  Toggle,
+  Skeleton,
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from '@fucina/ui';
 import { ConfettiButton } from './confetti';
 
 interface Item {
@@ -436,9 +438,10 @@ export const FourthIllustration = () => {
                     <h4 className="line-clamp-1 text-lg-semibold">
                       {item.name}
                     </h4>
-                    <p className="line-clamp-1 text-description text-sm">
-                      🪬 {item.karmas} karmas
-                    </p>
+                    <div className="flex justify-start items-center gap-1 text-description text-sm">
+                      <HeartHandshake className="size-4" />
+                      <p>{item.karmas} Karmas</p>
+                    </div>
                   </div>
                 </div>
                 <Skeleton
@@ -708,46 +711,46 @@ export const SeventhIllustration = () => {
         >
           <div className="flex items-center space-x-2">
             <RadioGroupItem
-              value="violet"
+              value="amber"
               id="r1"
+              style={colorStyles}
+              className="border-2 border-amber-500 focus-visible:ring-[var(--hover-bg-color)] [&>span>svg]:fill-[var(--bg-color)] [&>span>svg]:stroke-[var(--bg-color)]"
+            />
+            <Label htmlFor="r1" className="sr-only">
+              Amber
+            </Label>
+          </div>
+          <div className="flex items-center space-x-2">
+            <RadioGroupItem
+              value="violet"
+              id="r2"
               style={colorStyles}
               className="border-2 border-violet-500 focus-visible:ring-[var(--hover-bg-color)] [&>span>svg]:fill-[var(--bg-color)] [&>span>svg]:stroke-[var(--bg-color)]"
             />
-            <Label htmlFor="r1" className="sr-only">
+            <Label htmlFor="r2" className="sr-only">
               Violet
             </Label>
           </div>
           <div className="flex items-center space-x-2">
             <RadioGroupItem
               value="rose"
-              id="r2"
+              id="r3"
               style={colorStyles}
               className="border-2 border-rose-500 focus-visible:ring-[var(--hover-bg-color)] [&>span>svg]:fill-[var(--bg-color)] [&>span>svg]:stroke-[var(--bg-color)]"
             />
-            <Label htmlFor="r2" className="sr-only">
+            <Label htmlFor="r3" className="sr-only">
               Rose
             </Label>
           </div>
           <div className="flex items-center space-x-2">
             <RadioGroupItem
               value="teal"
-              id="r3"
+              id="r4"
               style={colorStyles}
               className="border-2 border-teal-500 focus-visible:ring-[var(--hover-bg-color)] [&>span>svg]:fill-[var(--bg-color)] [&>span>svg]:stroke-[var(--bg-color)]"
             />
-            <Label htmlFor="r3" className="sr-only">
-              Teal
-            </Label>
-          </div>
-          <div className="flex items-center space-x-2">
-            <RadioGroupItem
-              value="amber"
-              id="r4"
-              style={colorStyles}
-              className="border-2 border-amber-500 focus-visible:ring-[var(--hover-bg-color)] [&>span>svg]:fill-[var(--bg-color)] [&>span>svg]:stroke-[var(--bg-color)]"
-            />
             <Label htmlFor="r4" className="sr-only">
-              Amber
+              Teal
             </Label>
           </div>
         </RadioGroup>
