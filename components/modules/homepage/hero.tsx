@@ -1,12 +1,11 @@
 import React from 'react';
-import Link from 'next/link';
-import { track } from '@vercel/analytics';
 
-import { Tag, Button } from '@fucina/ui';
+import { Tag } from '@fucina/ui';
 import { cn } from '@fucina/utils';
 import GridPattern from '@/components/grid-pattern';
 import HeroImg from '@/components/hero-img';
 import TrustedBy from '@/components/modules/homepage/trusted-by';
+import { SignupButton } from '@/components/auth-buttons';
 
 export default function Hero() {
   return (
@@ -31,14 +30,7 @@ export default function Hero() {
           </p>
         </div>
         <div className="mt-10">
-          <Button asChild className="font-brand font-medium text-lg">
-            <Link
-              href="https://www.app.feely.so/signup"
-              onClick={() => track('Signup')}
-            >
-              Start for free
-            </Link>
-          </Button>
+          <SignupButton location={{ section: 'Hero' }} />
         </div>
         <HeroImg />
       </div>

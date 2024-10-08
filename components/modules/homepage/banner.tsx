@@ -1,10 +1,8 @@
 import React from "react";
-import Link from "next/link";
-import { track } from '@vercel/analytics';
 
-import { Button } from "@fucina/ui";
 import { cn } from "@fucina/utils";
 import GridPattern from "@/components/grid-pattern";
+import { SignupButton } from "@/components/auth-buttons";
 
 export default function Banner() {
   return (
@@ -23,13 +21,7 @@ export default function Banner() {
           </p>
         </div>
         <div className="flex justify-center mt-8 sm:mt-10 px-8 sm:px-0">
-          <Button
-            asChild
-            className="w-full sm:w-fit font-brand font-medium text-lg"
-            onClick={() => track('Login')}
-          >
-            <Link href="https://www.app.feely.so/signup">Start for free</Link>
-          </Button>
+          <SignupButton location={{ section: 'Banner' }} />
         </div>
       </div>
       <GridPattern

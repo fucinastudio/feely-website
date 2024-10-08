@@ -1,9 +1,7 @@
 import React from 'react';
-import Link from 'next/link';
-import { track } from '@vercel/analytics';
 
-import { Button } from '@fucina/ui';
 import Logo from '@/components/logo';
+import { LoginButton, SignupButton } from '@/components/auth-buttons';
 
 export default function Navbar() {
   return (
@@ -14,21 +12,8 @@ export default function Navbar() {
       <div className="flex justify-between items-center mx-auto px-4 sm:px-6 w-full max-w-screen-xl">
         <Logo />
         <div className="flex items-center space-x-1.5">
-          <Button
-            variant="secondary"
-            asChild
-            className="font-brand font-medium text-lg"
-            onClick={() => track('Login')}
-          >
-            <Link href="https://www.app.feely.so/login">Login</Link>
-          </Button>
-          <Button
-            asChild
-            className="font-brand font-medium text-lg"
-            onClick={() => track('Signup')}
-          >
-            <Link href="https://www.app.feely.so/signup">Start for free</Link>
-          </Button>
+          <LoginButton />
+          <SignupButton location={{ section: 'Navbar' }} />
         </div>
       </div>
     </nav>
