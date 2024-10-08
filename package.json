@@ -13,6 +13,7 @@
     "@fucina/tailwind": "^0.0.7",
     "@fucina/ui": "0.0.16",
     "@fucina/utils": "^0.0.5",
+    "@vercel/analytics": "^1.3.1",
     "canvas-confetti": "^1.9.3",
     "framer-motion": "^11.3.6",
     "next": "14.2.9",
