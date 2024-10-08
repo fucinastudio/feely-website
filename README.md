@@ -1,5 +1,5 @@
 <a href="https://dub.co">
-  <img alt="User feedbacks get real by being rewarded." src="https://github.com/fucinastudio/feely/assets/readme.png" />
+  <img alt="User feedbacks get real by being rewarded." src="https://github.com/fucinastudio/feely-website/blob/main/public/assets/readme.png" />
 </a>
 
 <h3 align="center">Feely</h3>
