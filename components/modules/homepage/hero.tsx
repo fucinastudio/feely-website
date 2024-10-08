@@ -12,7 +12,7 @@ export default function Hero() {
     <section id="hero" className="relative z-20 w-screen">
       <div className="relative z-20 justify-items-center grid mx-auto px-6 sm:px-6 pt-32 sm:pt-48 pb-8 sm:pb-10 w-full max-w-screen-lg">
         <Tag variant="brand" className="rounded-full text-md">
-          🔥 Now in waitlist
+          🔥 Now in Public Beta
         </Tag>
         <div className="justify-items-center gap-4 sm:gap-6 grid mt-6 sm:mt-8 max-w-screen-md text-center">
           <h1 className="font-brand font-medium text-6xl sm:text-7xl">
@@ -31,7 +31,7 @@ export default function Hero() {
         </div>
         <div className="mt-10">
           <Button asChild className="font-brand font-medium text-lg">
-            <Link href="/waitlist">Join the waitlist</Link>
+            <Link href="https://www.app.feely.so/signup">Start for free</Link>
           </Button>
         </div>
         <HeroImg />

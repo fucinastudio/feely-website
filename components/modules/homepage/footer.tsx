@@ -16,7 +16,7 @@ export default function Footer() {
           </Link>
           <div className="flex justify-normal sm:justify-center items-center space-x-3">
             <Link
-              href="https://github.com/feelyso/feely"
+              href="https://github.com/fucinastudio"
               className="opacity-85 hover:opacity-100 hover:cursor-pointer"
             >
               <GithubIcon />

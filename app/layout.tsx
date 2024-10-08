@@ -1,14 +1,10 @@
-import type { Metadata } from 'next';
-
+import { metadata } from '@/lib/metadata';
 import { ThemeProvider } from '@/components/theme-provider';
 
 import { sans, brand, logo } from '@/styles/fonts/font';
 import '@/styles/globals.css';
 
-export const metadata: Metadata = {
-  title: 'Fucina - Website Template',
-  description: 'Open source website template',
-};
+export { metadata };
 
 export default function RootLayout({
   children,

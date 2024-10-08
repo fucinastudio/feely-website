@@ -65,6 +65,7 @@ import {
   TreePalm,
 } from 'lucide-react';
 import { useTheme } from 'next-themes';
+import { ConfettiButton } from './confetti';
 
 interface Item {
   image: string;
@@ -122,14 +123,29 @@ export const FirstIllustration = () => {
     onToggle,
     toggled,
   }) => (
-    <Toggle
-      className="justify-items-center gap-0 grid p-1 rounded w-11 h-14"
-      onPressedChange={onToggle}
-      pressed={toggled}
-    >
-      <ChevronUp size={24} />
-      <p className="text-center text-md">{count + (toggled ? 1 : 0)}</p>
-    </Toggle>
+    <>
+      {!toggled ? (
+        <ConfettiButton>
+          <Toggle
+            className="justify-items-center gap-0 grid p-1 rounded w-11 h-14"
+            onPressedChange={onToggle}
+            pressed={toggled}
+          >
+            <ChevronUp size={24} />
+            <p className="text-center text-md">{count + (toggled ? 1 : 0)}</p>
+          </Toggle>
+        </ConfettiButton>
+      ) : (
+        <Toggle
+          className="justify-items-center gap-0 grid p-1 rounded w-11 h-14"
+          onPressedChange={onToggle}
+          pressed={toggled}
+        >
+          <ChevronUp size={24} />
+          <p className="text-center text-md">{count + (toggled ? 1 : 0)}</p>
+        </Toggle>
+      )}
+    </>
   );
 
   return (
@@ -137,8 +153,8 @@ export const FirstIllustration = () => {
       <div className="top-0 left-0 absolute px-5 sm:px-6 md:px-8 pt-5 sm:pt-6 md:pt-8 size-full">
         <div className="gap-1 border-default grid p-1 border border-b-0 rounded-t-lg size-full">
           {items.map((item, index) => (
-            <div key={index}>
-              <div className="flex justify-between items-start gap-6 bg-item hover:bg-item-hover p-4 rounded">
+            <div key={index} className="flex flex-col gap-1">
+              <div className="flex justify-between items-start gap-6 bg-item hover:bg-item-active p-4 rounded">
                 <div className="flex justify-normal items-start gap-4 w-full">
                   <Avatar className="sm:flex hidden mt-1" size="xl">
                     <AvatarImage src={item.image} alt={item.name} />
@@ -212,14 +228,29 @@ export const SecondIllustration = () => {
     onToggle,
     toggled,
   }) => (
-    <Toggle
-      className="justify-items-center gap-0 grid p-1 rounded w-11 h-14"
-      onPressedChange={onToggle}
-      pressed={toggled}
-    >
-      <ChevronUp size={24} />
-      <p className="text-center text-md">{count + (toggled ? 1 : 0)}</p>
-    </Toggle>
+    <>
+      {!toggled ? (
+        <ConfettiButton>
+          <Toggle
+            className="justify-items-center gap-0 grid p-1 rounded w-11 h-14"
+            onPressedChange={onToggle}
+            pressed={toggled}
+          >
+            <ChevronUp size={24} />
+            <p className="text-center text-md">{count + (toggled ? 1 : 0)}</p>
+          </Toggle>
+        </ConfettiButton>
+      ) : (
+        <Toggle
+          className="justify-items-center gap-0 grid p-1 rounded w-11 h-14"
+          onPressedChange={onToggle}
+          pressed={toggled}
+        >
+          <ChevronUp size={24} />
+          <p className="text-center text-md">{count + (toggled ? 1 : 0)}</p>
+        </Toggle>
+      )}
+    </>
   );
 
   return (
@@ -235,8 +266,8 @@ export const SecondIllustration = () => {
           {items
             .filter((_, index) => index < 2)
             .map((item, index) => (
-              <div key={index}>
-                <div className="flex items-start gap-2 bg-item hover:bg-item-hover p-2 rounded">
+              <div key={index} className="flex flex-col gap-1">
+                <div className="flex items-start gap-2 bg-item hover:bg-item-active p-2 rounded">
                   <div className="gap-1 grid w-full">
                     <Skeleton shape="line" className="rounded w-full h-4" />
                     <Skeleton shape="line" className="rounded w-full h-4" />
@@ -262,8 +293,8 @@ export const SecondIllustration = () => {
           {items
             .filter((_, index) => index >= 2 && index < 4)
             .map((item, index) => (
-              <div key={index + 2}>
-                <div className="flex items-start gap-2 bg-item hover:bg-item-hover p-2 rounded">
+              <div key={index + 2} className="flex flex-col gap-1">
+                <div className="flex items-start gap-2 bg-item hover:bg-item-active p-2 rounded">
                   <div className="gap-1 grid w-full">
                     <Skeleton shape="line" className="rounded w-full h-4" />
                     <Skeleton shape="line" className="rounded w-full h-4" />
@@ -289,8 +320,8 @@ export const SecondIllustration = () => {
           {items
             .filter((_, index) => index >= 4)
             .map((item, index) => (
-              <div key={index + 4}>
-                <div className="flex items-start gap-2 bg-item hover:bg-item-hover p-2 rounded">
+              <div key={index + 4} className="flex flex-col gap-1">
+                <div className="flex items-start gap-2 bg-item hover:bg-item-active p-2 rounded">
                   <div className="gap-1 grid w-full">
                     <Skeleton shape="line" className="rounded w-full h-4" />
                     <Skeleton shape="line" className="rounded w-full h-4" />
@@ -365,8 +396,8 @@ export const FourthIllustration = () => {
       <div className="top-0 left-0 absolute px-5 sm:px-6 md:px-8 pt-5 sm:pt-6 md:pt-8 size-full">
         <div className="gap-1 border-default grid p-1 border border-b-0 rounded-t-lg size-full">
           {items.map((item, index) => (
-            <div key={index}>
-              <div className="flex justify-between items-center gap-6 bg-item hover:bg-item-hover p-4 rounded">
+            <div key={index} className="flex flex-col gap-1">
+              <div className="flex justify-between items-center gap-6 bg-item hover:bg-item-active p-4 rounded">
                 <div className="flex justify-normal items-center gap-4 w-full">
                   <div className="flex justify-center items-center size-8">
                     <p className="text-heading-subsection">{item.position}</p>
@@ -374,7 +405,7 @@ export const FourthIllustration = () => {
                   <HoverCard>
                     <HoverCardTrigger asChild>
                       <Avatar
-                        className="sm:flex border-default hidden mt-1 border rounded-full"
+                        className="sm:flex hidden mt-1rounded-full"
                         size="xl"
                       >
                         <AvatarImage src={item.image} alt={item.name} />
@@ -384,7 +415,7 @@ export const FourthIllustration = () => {
                     <HoverCardContent className="w-80">
                       <div className="flex items-center space-x-2">
                         <Avatar
-                          className="sm:flex border-default hidden mt-1 border rounded-full"
+                          className="sm:flex hidden mt-1 rounded-full"
                           size="xl"
                         >
                           <AvatarImage src={item.image} alt={item.name} />
@@ -725,7 +756,7 @@ export const SeventhIllustration = () => {
             <h4 className="text-heading-subsection">Ideas</h4>
             <Button
               style={colorStyles}
-              className="bg-[var(--bg-color)] hover:bg-[var(--hover-bg-color)] dark:hover:bg-[var(--dark-hover-bg-color)] active:bg-[var(--active-bg-color)] dark:active:bg-[var(--dark-active-bg-color)]"
+              className="bg-[var(--bg-color)] hover:bg-[var(--hover-bg-color)] dark:hover:bg-[var(--dark-hover-bg-color)] active:bg-[var(--active-bg-color)] dark:active:bg-[var(--dark-active-bg-color)] text-white"
             >
               New idea
             </Button>
