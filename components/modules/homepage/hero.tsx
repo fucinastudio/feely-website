@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { track } from '@vercel/analytics';
 
 import { Tag, Button } from '@fucina/ui';
 import { cn } from '@fucina/utils';
@@ -31,7 +32,12 @@ export default function Hero() {
         </div>
         <div className="mt-10">
           <Button asChild className="font-brand font-medium text-lg">
-            <Link href="https://www.app.feely.so/signup">Start for free</Link>
+            <Link
+              href="https://www.app.feely.so/signup"
+              onClick={() => track('Signup')}
+            >
+              Start for free
+            </Link>
           </Button>
         </div>
         <HeroImg />

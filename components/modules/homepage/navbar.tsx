@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { track } from '@vercel/analytics';
 
 import { Button } from '@fucina/ui';
 import Logo from '@/components/logo';
@@ -17,10 +18,15 @@ export default function Navbar() {
             variant="secondary"
             asChild
             className="font-brand font-medium text-lg"
+            onClick={() => track('Login')}
           >
             <Link href="https://www.app.feely.so/login">Login</Link>
           </Button>
-          <Button asChild className="font-brand font-medium text-lg">
+          <Button
+            asChild
+            className="font-brand font-medium text-lg"
+            onClick={() => track('Signup')}
+          >
             <Link href="https://www.app.feely.so/signup">Start for free</Link>
           </Button>
         </div>
