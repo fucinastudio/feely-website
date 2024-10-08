@@ -1,19 +1,17 @@
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
-import { Gem, ListOrdered, Trophy, PlusCircle, Users, Globe, Heart } from 'lucide-react';
+import { Gem, ListOrdered, Trophy } from 'lucide-react';
 
 import { Button } from '@fucina/ui';
 import { GithubIcon } from '@/components/social-icons';
 import EmptyRaw from '@/components/modules/homepage/feature-blocks/empty-raw';
 import Title from '@/components/modules/homepage/feature-blocks/title';
 import {
-  DoubleCard,
   SingleCard,
 } from '@/components/modules/homepage/feature-blocks/cards';
 import Icons from '@/components/modules/homepage/feature-blocks/icons';
 import WithButton from '@/components/modules/homepage/feature-blocks/with-button';
-import { FifthIllustration, FirstIllustration, FourthIllustration, SecondIllustration, SeventhIllustration, SixthIllustration, ThirdIllustration } from '@/components/illustrations';
+import { FirstIllustration, FourthIllustration, SecondIllustration, SeventhIllustration } from '@/components/illustrations';
 
 export default function Features() {
   return (
@@ -61,14 +59,21 @@ export default function Features() {
         }
         description="Improve your project thanks to and with your users: grow up sharing everything. "
       />
-      <DoubleCard
-        firstTitle="Enlight the road"
-        firstDescription="Share your roadmap, so every step is visible."
-        firstIllustration={<SecondIllustration />}
-        secondTitle="Share the updates "
-        secondDescription="Notifications will help for each release."
-        secondIllustration={<ThirdIllustration />}
+      <SingleCard
+        title="Enlight the road"
+        description="Share your roadmap, so every step is visible."
+        illustration={<SecondIllustration />}
       />
+      {/*
+        <DoubleCard
+          firstTitle="Enlight the road"
+          firstDescription="Share your roadmap, so every step is visible."
+          firstIllustration={<SecondIllustration />}
+          secondTitle="Share the updates "
+          secondDescription="Notifications will help for each release."
+          secondIllustration={<ThirdIllustration />}
+        />
+      */}
       <EmptyRaw />
       <Title
         title={
@@ -83,6 +88,7 @@ export default function Features() {
         description="Everytime their ideas get voted, they got points."
         illustration={<FourthIllustration />}
       />
+      {/* 
       <DoubleCard
         firstTitle="Badges for great goals"
         firstDescription="Stimulate people to be an active part of the community and give them bagdes. "
@@ -91,6 +97,7 @@ export default function Features() {
         secondDescription="Give your users rewards to show your gratitude."
         secondIllustration={<SixthIllustration />}
       />
+      */}
       <EmptyRaw />
       <Title
         title={
@@ -106,6 +113,7 @@ export default function Features() {
         description="Feely can get dressed as you like."
         illustration={<SeventhIllustration />}
       />
+      {/*
       <Icons
         items={[
           {
@@ -169,6 +177,7 @@ export default function Features() {
           },
         ]}
       />
+      */}
       <EmptyRaw />
       <WithButton
         title={

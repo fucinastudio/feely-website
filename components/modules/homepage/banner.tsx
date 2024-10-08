@@ -21,9 +21,11 @@ export default function Banner() {
             Build a product for your people. And they will feel part of it.
           </p>
         </div>
-        <div className="mt-8 sm:mt-10">
-          <Button asChild className="font-brand font-medium text-lg">
-            <Link href="/waitlist">Join the waitlist</Link>
+        <div className="flex justify-center mt-8 sm:mt-10 px-8 sm:px-0">
+          <Button asChild className="w-full sm:w-fit font-brand font-medium text-lg">
+            <Link href="https://www.app.feely.so/signup">
+              Start for free
+            </Link>
           </Button>
         </div>
       </div>
