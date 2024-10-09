@@ -4,9 +4,6 @@ export default function TrustedBy() {
   const brands = [
     'brand1.svg',
     'brand2.svg',
-    'brand3.svg',
-    'brand4.svg',
-    'brand5.svg',
   ];
   return (
     <section
@@ -25,7 +22,7 @@ export default function TrustedBy() {
                 <img
                   alt={brand}
                   src={`/assets/company/${brand}`}
-                  className="brightness-0 px-2 w-28 h-10 dark:invert"
+                  className="brightness-0 px-2 w-40 h-10 dark:invert"
                 />
               </li>
             ))}
