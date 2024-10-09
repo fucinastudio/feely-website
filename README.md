@@ -1,4 +1,4 @@
-<a href="https://dub.co">
+<a href="https://feely.so">
   <img alt="User feedbacks get real by being rewarded." src="https://github.com/fucinastudio/feely-website/blob/main/public/assets/readme.png" />
 </a>
 
@@ -6,6 +6,7 @@
 
 <p align="center">
     User feedbacks get real by being rewarded.
+    <br />
     <br />
     <a href="https://feely.so"><strong>Learn more »</strong></a>
 </p>
